@@ -1,5 +1,5 @@
 var full = document.getElementById("fullurl");
-// var shortid = document.getElementById("short");
+var shortdiv = document.getElementById("shortdiv");
 var newlink = document.createElement("a");
 var errorp = document.getElementById("error");
 const url =
@@ -13,7 +13,7 @@ async function getemoji() {
     .then(function (response) {
       if (response.status == 200) {
         console.log("success");
-        for (var i = 0; i < 10; i++) {
+        for (var i = 0; i < 18; i++) {
           var code = "0x" + response.data[i].codePoint;
           console.log(code);
           console.log(String.fromCodePoint(code));
@@ -25,14 +25,14 @@ async function getemoji() {
       console.log(err);
     });
 
-  var arr = allshorturls();
+  var arr = await allshorturls();
 
   var combination = "";
   var f = 1;
   while (f == 1) {
     var c = -1;
     for (var i = 0; i < 6; i++) {
-      var random = Math.floor(Math.random() * 10);
+      var random = Math.floor(Math.random() * 18);
       combination += collection[random];
     }
     for (var i = 0; i < arr.length; i++) {
@@ -63,7 +63,7 @@ async function postdata(url) {
       console.log("Short: " + url + " Long: " + fullurl);
       // shortid.textContent = url;
       newlink.href = fullurl;
-      newlink.innerHTML = url;
+      newlink.innerHTML = window.location.href + "" + url;
       newlink.setAttribute("target", "_blank");
       document.getElementById("shortdiv").appendChild(newlink);
       errorp.innerText = "Your Short Link is Right Below";
@@ -79,6 +79,7 @@ document
   .addEventListener("submit", async function (event) {
     event.preventDefault();
     errorp.innerText = "";
+    shortdiv.innerHTML = "";
     var check = await alllongurls();
     if (check == -1) {
       errorp.textContent = "Already Exists";
@@ -88,18 +89,16 @@ document
     }
   });
 
-function allshorturls() {
+async function allshorturls() {
   var arr = [];
-  async function alreadyExist() {
-    await axios
-      .get("https://trying-b8609.firebaseio.com/allurls.json")
-      .then(function (response) {
-        var alldata = response.data;
-        for (let key in alldata) {
-          arr.push(alldata[key].shorturl);
-        }
-      });
-  }
+  await axios
+    .get("https://trying-b8609.firebaseio.com/allurls.json")
+    .then(function (response) {
+      var alldata = response.data;
+      for (let key in alldata) {
+        arr.push(alldata[key].shorturl);
+      }
+    });
   console.log(arr);
   return arr;
 }
