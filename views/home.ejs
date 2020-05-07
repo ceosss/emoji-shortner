@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMOJI SHORTNER</title>
+    <link rel="shortcut icon" type="image/png" href="./favicon.png" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://fontlibrary.org/face/asd"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="head">
+        <h1>Emoji - Shortner</h1>
+        <p>😀😎😂😉</p>
+      </div>
+      <div class="form">
+        <form id="formid">
+          <input
+            id="fullurl"
+            type="url"
+            name="fullurl"
+            id="fullurl"
+            placeholder="Enter URL"
+            pattern="https://.*"
+            required
+            autocomplete="off"
+          />
+          <button class="button">SUBMIT</button>
+        </form>
+      </div>
+
+      <div class="error">
+        <p id="error"></p>
+      </div>
+
+      <div id="shortdiv" class="short">
+        <p id="short"></p>
+      </div>
+    </div>
+    <script src="./script.js" defer></script>
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </body>
+</html>

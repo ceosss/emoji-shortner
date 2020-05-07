@@ -1,0 +1,196 @@
+body {
+  background-image: url("compressedbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  font-family: "MinecraftiaRegular", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: #000 0px 0px 1px, #000 0px 0px 7px, #000 0px 0px 1px,
+    #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 2px;
+  color: #55efc4;
+  font-size: 20px;
+}
+.button {
+  letter-spacing: 12px;
+  height: 40px;
+  width: 400px;
+  outline: 2px solid black;
+  position: relative;
+  margin: 0;
+  display: block;
+  background-image: url("http://charliecowan.co.uk/mcbuttongenerator/button_center.png");
+  background-repeat: repeat;
+  padding: 0;
+  font-family: MinecraftiaRegular;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px #4c4c4c;
+  border-bottom: 4px solid #565656;
+  border-right: 2px solid #565656;
+  border-left: 2px solid #aaa;
+  border-top: 2px solid #aaa;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.button:hover {
+  border-bottom: 4px solid #59639a;
+  border-right: 2px solid #59639a;
+  border-left: 2px solid #bdc6ff;
+  border-top: 2px solid #bdc6ff;
+  background-image: url("http://charliecowan.co.uk/mcbuttongenerator/button_active_center.png");
+  color: #ffffa0;
+}
+
+.main {
+  /* background-color: gainsboro; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  /* -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black; */
+  text-shadow: #000 0px 0px 1px, #000 0px 0px 7px, #000 0px 0px 1px,
+    #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 2px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.head h1 {
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #f7ff38;
+}
+
+.head p {
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 20px;
+}
+
+input {
+  border: none;
+  outline: none;
+  text-align: center;
+  height: 40px;
+  width: 380px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  /* padding-left: 10px; */
+  font-family: "MinecraftiaRegular", sans-serif;
+}
+
+div.form {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#error {
+  color: #e74c3c;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: #000 0px 0px 1px, #000 0px 0px 3px, #000 0px 0px 1px,
+    #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 2px;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media only screen and (max-width: 700px) {
+  .head h1 {
+    font-size: 2.5rem;
+  }
+  .head p {
+    font-size: 2.5rem;
+  }
+  .head {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .head h1 {
+    font-size: 2rem;
+    letter-spacing: 0px;
+  }
+  .head p {
+    font-size: 2rem;
+  }
+
+  .head {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .head h1 {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+  }
+  .head p {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  input {
+    width: 320px;
+  }
+  .button {
+    width: 340px;
+  }
+  .head {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  /* input {
+    width: 290px;
+  } */
+  /* .button {
+    width: 310px;
+  } */
+  .head {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .head h1 {
+    font-size: 22px;
+  }
+  .form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  #formid {
+    width: 100%;
+    text-align: center;
+  }
+  input {
+    width: 92%;
+  }
+  .button {
+    width: 98%;
+    margin: 3px;
+  }
+}
