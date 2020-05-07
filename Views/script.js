@@ -7,16 +7,16 @@ const url =
 
 var collection = [];
 async function getemoji() {
-  console.log("inside getemoji");
+  // console.log("inside getemoji");
   await axios
     .get(url)
     .then(function (response) {
       if (response.status == 200) {
-        console.log("success");
+        // console.log("success");
         for (var i = 0; i < 18; i++) {
           var code = "0x" + response.data[i].codePoint;
-          console.log(code);
-          console.log(String.fromCodePoint(code));
+          // console.log(code);
+          // console.log(String.fromCodePoint(code));
           collection.push(String.fromCodePoint(code));
         }
       }
@@ -43,7 +43,7 @@ async function getemoji() {
     }
     if (c != 1) f = 0;
   }
-  console.log("new:" + combination);
+  // console.log("new:" + combination);
 
   postdata(combination);
 }
@@ -59,8 +59,8 @@ async function postdata(url) {
   await axios
     .post("https://trying-b8609.firebaseio.com/allurls.json", urldata)
     .then(function (response) {
-      console.log("Link Successfully Recorded");
-      console.log("Short: " + url + " Long: " + fullurl);
+      // console.log("Link Successfully Recorded");
+      // console.log("Short: " + url + " Long: " + fullurl);
       // shortid.textContent = url;
       newlink.href = fullurl;
       newlink.innerHTML = window.location.href + "" + url;
@@ -84,7 +84,7 @@ document
     if (check == -1) {
       errorp.textContent = "Already Exists";
     } else {
-      console.log("doesnot");
+      // console.log("doesnot");
       getemoji();
     }
   });
@@ -99,14 +99,14 @@ async function allshorturls() {
         arr.push(alldata[key].shorturl);
       }
     });
-  console.log(arr);
+  // console.log(arr);
   return arr;
 }
 
 async function alllongurls() {
   var arr = [];
   var newfullurl = await full.value;
-  console.log(newfullurl);
+  // console.log(newfullurl);
 
   await axios
     .get("https://trying-b8609.firebaseio.com/allurls.json")
@@ -117,12 +117,12 @@ async function alllongurls() {
       }
     });
 
-  console.log(arr);
+  // console.log(arr);
 
   var f = 0;
   for (var i = 0; i < arr.length; i++) {
     if (arr[i] == newfullurl) {
-      console.log("exists");
+      // console.log("exists");
       f = -1;
       break;
     }
