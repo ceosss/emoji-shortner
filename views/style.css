@@ -12,8 +12,9 @@ a {
   -webkit-font-smoothing: antialiased;
   text-shadow: #000 0px 0px 1px, #000 0px 0px 7px, #000 0px 0px 1px,
     #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 2px;
-  color: #55efc4;
-  font-size: 20px;
+  color: #ffffa0;
+  font-size: 1rem;
+  font-weight: bold;
 }
 .button {
   letter-spacing: 12px;
@@ -78,6 +79,10 @@ h1 {
   letter-spacing: 20px;
 }
 
+.head {
+  text-align: center;
+}
+
 input {
   border: none;
   outline: none;
@@ -126,10 +131,17 @@ div.form {
   }
 }
 
+@media only screen and (min-width: 560px) and (max-width: 615px) {
+  .haed h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+}
+
 @media only screen and (max-width: 560px) {
   .head h1 {
-    font-size: 2rem;
-    letter-spacing: 0px;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
   }
   .head p {
     font-size: 2rem;
@@ -143,7 +155,7 @@ div.form {
 
 @media only screen and (max-width: 400px) {
   .head h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     letter-spacing: 3px;
   }
   .head p {
@@ -176,7 +188,7 @@ div.form {
     margin-bottom: 30px;
   }
   .head h1 {
-    font-size: 22px;
+    font-size: 2rem;
   }
   .form {
     margin-top: 30px;
