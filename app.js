@@ -6,7 +6,7 @@ var axios = require("axios").default;
 var cors = require("cors");
 var bodyParser = require("body-parser");
 app.use(cors());
-app.use(express.static(__dirname + "/Views"));
+app.use(express.static(__dirname + "/views"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", function (req, res) {
